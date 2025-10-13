@@ -21,12 +21,12 @@ Additionally, there was a weak correlation between age and quality of sleep.
 ## Confusion Matrix
 1. Support Vector Machine Model
 
-- ![SVM](../ML_WEEK_2/images/svm.png)
+ ![SVM](../ML_WEEK_2/images/svm.png)
 
 2. Decision Tree Model
 
-- ![Decision Tree](../ML_WEEK_2/images/dt.png)
+ ![Decision Tree](../ML_WEEK_2/images/dt.png)
 
 3. Random Forest Model
 
-- ![Random Forest](../ML_WEEK_2/images/rf.png)
+ ![Random Forest](../ML_WEEK_2/images/rf.png)
