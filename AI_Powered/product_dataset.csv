@@ -1,0 +1,21 @@
+Product_ID,Product_Name,Category,Brand,Price_USD,Stock,Rating,Launch_Date,Discount_%,In_Stock
+P001,Wireless Bluetooth Earbuds,Electronics,SoundWave,49.99,120,4.5,2024-03-12,10,Yes
+P002,Smart Fitness Watch,Electronics,FitTrack,89.5,85,4.3,2023-11-05,5,Yes
+P003,Cotton Crewneck T-Shirt,Clothing,UrbanWear,15.99,200,4.2,2024-05-20,20,Yes
+P004,Leather Wallet,Accessories,LuxeCraft,39.99,60,4.4,2024-02-18,15,Yes
+P005,Stainless Steel Water Bottle,Home & Kitchen,AquaPure,24.99,150,4.6,2023-09-10,10,Yes
+P006,Ceramic Coffee Mug Set (4pcs),Home & Kitchen,CozyHome,18.5,95,4.1,2024-06-22,0,Yes
+P007,Gaming Mouse RGB,Electronics,HyperClick,39.0,110,4.7,2024-04-07,12,Yes
+P008,Running Shoes,Footwear,AeroStep,64.99,75,4.3,2023-12-02,25,Yes
+P009,Classic Denim Jeans,Clothing,DenimCo,49.9,130,4.0,2024-03-27,10,Yes
+P010,Noise Cancelling Headphones,Electronics,SonicMax,129.0,40,4.8,2024-01-15,8,Yes
+P011,Scented Candle,Home & Kitchen,PureGlow,12.0,180,4.5,2024-07-11,5,Yes
+P012,Women’s Handbag,Accessories,ModaLine,79.99,50,4.6,2024-05-01,15,Yes
+P013,Yoga Mat (6mm),Sports,FlexPro,29.99,90,4.4,2024-03-10,0,Yes
+P014,Beard Grooming Kit,Beauty,KingBeard,35.0,45,4.5,2023-10-30,10,Yes
+P015,LED Desk Lamp,Home & Office,BrightLite,27.5,140,4.3,2024-02-09,12,Yes
+P016,Women’s Sneakers,Footwear,TrendStep,59.99,65,4.2,2024-06-15,20,Yes
+P017,Laptop Backpack,Accessories,GearUp,44.9,75,4.4,2023-11-28,10,Yes
+P018,Hair Dryer,Beauty,GlamPro,56.0,55,4.6,2024-03-02,5,Yes
+P019,Organic Face Cream,Beauty,NatureGlow,32.0,70,4.7,2024-01-20,8,Yes
+P020,Wireless Keyboard,Electronics,TypoTech,45.0,115,4.3,2024-08-05,15,Yes
