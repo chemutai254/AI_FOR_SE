@@ -124,7 +124,7 @@ success_selector = (By.XPATH, "//a[contains(text(), 'Logout') or contains(text()
 # ===========================================================
 # TEST CREDENTIALS (uses env vars for safety)
 # ===========================================================
-valid_email = os.getenv("TEST_EMAIL", "example@gmail.com")
+valid_email = os.getenv("TEST_EMAIL", "test@gmail.com")
 valid_pass = os.getenv("TEST_PASS", "Password")
 invalid_email = "fake_email@example.com"
 invalid_pass = "wrong_password"
