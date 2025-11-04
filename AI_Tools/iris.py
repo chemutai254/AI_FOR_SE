@@ -1,10 +1,22 @@
-import joblib
+import sys
+import os
+
+try:
+    import joblib
+except ImportError:
+    print("Missing required package 'joblib'. Install with: python3 -m pip install joblib scikit-learn")
+    sys.exit(1)
+
 import streamlit as st
 import numpy as np
 
-# Load the model
-with open('iris_model.pkl', 'rb') as f:
-    classifier = joblib.load(f)
+# Load the model (resolve path relative to this file)
+MODEL_PATH = os.path.join(os.path.dirname(__file__), 'iris_model.pkl')
+if not os.path.exists(MODEL_PATH):
+    print(f"Model file not found at {MODEL_PATH}. Place iris_model.pkl next to iris.py")
+    sys.exit(1)
+
+classifier = joblib.load(MODEL_PATH)
     
 def predictor(sepal_length, sepal_width, petal_length, petal_width):
     global classifier
