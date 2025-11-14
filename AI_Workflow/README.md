@@ -1,8 +1,8 @@
 # AI Development Workflow
 
-## Part 1: Short Answer Questions (30 points)
+## Part 1: Short Answer Questions
 
-### 1. Problem Definition (6 points)
+### 1. Problem Definition
 
 **Define a hypothetical AI problem**
 *AI-powered Crop Disease Detection Application*
@@ -24,7 +24,7 @@
 **Key Performance Indicator (KPI) to measure success**
 - Accuracy Detection Rate (%) — the percentage of correctly identified diseased and healthy crops.
 
-### 2. Data Collection & Preprocessing (8 points)
+### 2. Data Collection & Preprocessing 
 **Identify 2 data sources for your problem**
 1. *Kaggle* [Plant Disease Dataset](https://www.kaggle.com/datasets/emmarex/plantdisease?utm_source=chatgpt.com)
 2. *Tensorflow* Datasets Catalog [Plant Village Dataset](https://www.tensorflow.org/datasets/catalog/plant_village?utm_source=chatgpt.com)
@@ -46,7 +46,7 @@
 - Ensure labels are correct and consistent across datasets.
 - Address class imbalance by oversampling minority classes or using augmentation.
 
-### 3. Model Development (8 points)
+### 3. Model Development
 1. *Choose a model and justify your choice*
 - The project utilizes Convolutional Neural Networks (CNN) with transfer learning (the use of pre-trained models) such as **MobileNetV2** and **EfficientNet-lite**.
 - Why CNN with transfer learning? This is because CNNs are used in processing images. Transfer learning reduces data needs since it already knows the important visual features capitalizing on speed of crop classification. Additionaly, the two pre-trained models are small and fast, thus can run inference on farmers' mobile devices (offline capability).
@@ -59,7 +59,7 @@
 - *Epochs*: The number of epochs controls how long the model is going to train. Too many epochs may lead to overfitting while few epochs, underfitting. Introduce early stopping when the validation loss starts increasing to capture the best performing model and prevent overfitting.
 - *Optimizer*: The use of Adam leads to fast training. On the other hand, SGD with momentum often yields better final accuracy. This, different optimizers lead to different convergence behaviors.
 
-### 4. Evaluation & Deployment (8 points)
+### 4. Evaluation & Deployment
 
 1. *Select 2 evaluation metrics and explain their relevance*
 - *Precision*: This measures how many predicted diseased leaves are truly diseased. It helps farmers gain trust on the outcome due to reduced false alert. 
@@ -72,29 +72,40 @@
 - *Data Privacy and Security*: Crop disease images may contain sensitive farm information or geolocation data of the farmer. Thus, before depolyment, relevant data protection regulations should be put into consideration.
 - *Limited On-Device Resources*: Many farmers use low-end smartphones with limited memory. Thus, lightweight models and cloud processing would be a best choice.
 
-## Part 2: Case Study Application (40 points)
+## Part 2: Case Study Application
 
 Scenario: A hospital wants an AI system to predict patient readmission risk within 30 days of discharge.
 
-Tasks:
 
-### Problem Scope (5 points): Define the problem, objectives, and stakeholders.
+### Problem Scope: Define the problem, objectives, and stakeholders.
+*Problem*
+- To predict a patients risk of readmission within 30 days of discharge.
 
-### Data Strategy (10 points):
+*Objectives*
+- To accurately predict 30-day readmission risk for discharged patients.
+- To identify key risk factors to inform intervention strategies.
+- To integrate predictions into clinical workflows for actionable decisions.
 
- Propose data sources (e.g., EHRs, demographics).
+*Stakeholders*
+- Hospital Staff: Doctors, nurses, care coordinators utilize predictions to plan follow-ups.
+- Hospital Management: Focus on reducing readmission rates and costs.
+- Patients: Improved care and reduced complications.
 
- Identify 2 ethical concerns (e.g., patient privacy).
+### Data Strategy:
 
- Design a preprocessing pipeline (include feature engineering steps).
+*Propose data sources (e.g., EHRs, demographics)*
+- 
+*Identify 2 ethical concerns (e.g., patient privacy)*
 
-### Model Development (10 points):
+*Design a preprocessing pipeline (include feature engineering steps)*
 
-Select a model and justify it.
+### Model Development:
 
-Create a confusion matrix and calculate precision/recall (hypothetical data).
+*Select a model and justify it*
 
-### Deployment (10 points):
+*Create a confusion matrix and calculate precision/recall (hypothetical data)*
+
+### Deployment:
 
 Outline steps to integrate the model into the hospital’s system.
 
@@ -102,28 +113,28 @@ How would you ensure compliance with healthcare regulations (e.g., HIPAA)?
 
 Optimization (5 points): Propose 1 method to address overfitting.
 
-## Part 3: Critical Thinking (20 points)
+## Part 3: Critical Thinking
 
-### Ethics & Bias (10 points):
+### Ethics & Bias:
 
 How might biased training data affect patient outcomes in the case study?
 
 Suggest 1 strategy to mitigate this bias.
 
-### Trade-offs (10 points):
+### Trade-offs:
 
 Discuss the trade-off between model interpretability and accuracy in healthcare.
 
 If the hospital has limited computational resources, how might this impact model choice?
 
-## Part 4: Reflection & Workflow Diagram (10 points)
+## Part 4: Reflection & Workflow Diagram
 
-### Reflection (5 points):
+### Reflection:
 
 What was the most challenging part of the workflow? Why?
 
 How would you improve your approach with more time/resources?
 
-### Diagram (5 points):
+### Diagram:
 
 Sketch a flowchart of the AI Development Workflow, labeling all stages.
