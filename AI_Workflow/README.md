@@ -47,12 +47,12 @@
 - Address class imbalance by oversampling minority classes or using augmentation.
 
 ### 3. Model Development (8 points)
-a. Choose a model and justify your choice.
+1. Choose a model and justify your choice.
 - The project utilizes Convolutional Neural Networks (CNN) with transfer learning (the use of pre-trained models) such as **MobileNetV2** and **EfficientNet-lite**.
 - Why CNN with transfer learning? This is because CNNs are used in processing images. Transfer learning reduces data needs since it already knows the important visual features capitalizing on speed of crop classification. Additionaly, the two pre-trained models are small and fast, thus can run inference on farmers' mobile devices (offline capability).
-b. Describe how you would split data into training/validation/test sets.
+2. Describe how you would split data into training/validation/test sets.
 - The dataset can be imbalanced due to some rare crop diseases. Thus, stratified splitting would be the best to split the dataset into the same proportion of each disease class. 
-c. Name 2 hyperparameters you would tune and why.
+3. Name 2 hyperparameters you would tune and why.
 - *Learning Rate*: It helps the model converge efficiently. High learning rate may cause unstable training, while low learning rate may slow the training.
 - *Dropout Rate*: Dropout helps reduce overfitting by randomly dropping neurons during training. This works efficiently when the dataset is small or the dataset contains imbalanced classes. 
 - *Batch Size*: This impacts the gradient stability and memory usage. Small batches give noisy gradients (may generalize better) while large batches train faster but may overfit.
@@ -61,14 +61,14 @@ c. Name 2 hyperparameters you would tune and why.
 
 ### 4. Evaluation & Deployment (8 points)
 
-a. Select 2 evaluation metrics and explain their relevance.
+1. Select 2 evaluation metrics and explain their relevance.
 - *Precision*: This measures how many predicted diseased leaves are truly diseased. It helps farmers gain trust on the outcome due to reduced false alert. 
 - *F1-Score*: It is useful in imbalanced datasets where some crop diseases are rare.
 
-b. What is concept drift? How would you monitor it post-deployment?
+2. What is concept drift? How would you monitor it post-deployment?
 - *Concept drift* occurs when the statistical properties of the target variable, or the relationship between input and output, change over time causing the model's predicition to degrade.
 - Monitoring would be achieved through **Sample Ground Truth** where new small batch images would be labeled periodically, and re-train the model when drift is detected.
-c. Describe 1 technical challenge during deployment (e.g., scalability).
+3. Describe 1 technical challenge during deployment (e.g., scalability).
 - *Data Privacy and Security*: Crop disease images may contain sensitive farm information or geolocation data of the farmer. Thus, before depolyment, relevant data protection regulations should be put into consideration.
 - *Limited On-Device Resources*: Many farmers use low-end smartphones with limited memory. Thus, lightweight models and cloud processing would be a best choice.
 
