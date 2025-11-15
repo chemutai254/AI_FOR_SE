@@ -19,7 +19,7 @@
 - Agricultural extension officers who support farmers and use insights for planning interventions.
 
 **Key Performance Indicator (KPI) to measure success**
-- Accuracy Detection Rate (%) — the percentage of correctly identified diseased and healthy crops.
+- Accuracy Detection Rate (%): The percentage of correctly identified diseased and healthy crops.
 
 ### 2. Data Collection & Preprocessing 
 **Identify 2 data sources for your problem**
@@ -102,7 +102,7 @@ Scenario: A hospital wants an AI system to predict patient readmission risk wit
 *Identify 2 ethical concerns (e.g., patient privacy)*
 - *Patient Privacy*: Sensitive health data must be protected in alignment with data protection regulations such as HIPAA and/or GDPR.
 - *Bias*: Historical discrepancies may lead to biased predictions against certain groups such as race, socioeconomic status, etc.
-- *Transparency*: Clinicians must understand why the AI flagged a patient as high risk.
+- *Transparency*: Health practitioners must understand why the AI flagged a patient as high risk.
 
 *Design a preprocessing pipeline (include feature engineering steps)*
 1. **Data Cleaning/Preprocessing**
@@ -144,19 +144,30 @@ Scenario: A hospital wants an AI system to predict patient readmission risk wit
 
 ### Deployment:
 
-Outline steps to integrate the model into the hospital’s system.
+1. *Outline steps to integrate the model into the hospital’s system*
+- *API Deployment*: Host the model (API) in a secure hospital network.
+- *EHR (Electronic Health Records) Integration*: Connect API to hospital EHR for real-time predictions upon discharge.
+- *Alerts & Dashboard*: Provide health practitioners with risk scores, recommended interventions, and explanations.
+- *Logging & Monitoring*: Track model predictions, performance, and flagged patients over time.
 
-How would you ensure compliance with healthcare regulations (e.g., HIPAA)?
+2. How would you ensure compliance with healthcare regulations (e.g., HIPAA)?
+- *HIPAA/GDPR compliance*: Encrypt data at rest and in transit via role-based access control.
+- *Audit Trails*: Record predictions, inputs, and model version for accountability.
+- *Explainable AI*: Use interpretable models or explainability tools to justify predictions to health practitioners.
 
-Optimization (5 points): Propose 1 method to address overfitting.
+3. Optimization (5 points): Propose 1 method to address overfitting.
+- *Early Stopping*: Stop training when validation loss starts increasing.
+- *Feature Selection*: Remove irrelevant or noisy features.
 
 ## Part 3: Critical Thinking
 
 ### Ethics & Bias:
 
-How might biased training data affect patient outcomes in the case study?
+*How might biased training data affect patient outcomes in the case study?*
 
-Suggest 1 strategy to mitigate this bias.
+
+*Suggest 1 strategy to mitigate this bias*
+
 
 ### Trade-offs:
 
