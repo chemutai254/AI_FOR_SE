@@ -129,22 +129,18 @@ Scenario: A hospital wants an AI system to predict patient readmission risk wit
 
 *Create a confusion matrix and calculate precision/recall (hypothetical data)*
 |                       |   Predicted No        |   Predicted Yes   |
+|-----------------------|-----------------------|-------------------|
 |   Actual No           |       1300            |       40          |
 |   Actual Yes          |       60              |       100         |
 
 1. Precision: Predicts Positive Values
        
-        \[
-        \text{Precision} = \frac{TP}{TP + FP} = \frac{100}{100 + 40} = 0.714 \text{ (71.4\%)}
-        \]
-        $\text{Precision} = \frac{TP}{TP + FP} = \frac{100}{100 + 40} = 0.714\ (71.4\%)$
+        Precision = TP / (TP + FP) = 100 / (100 + 40) = 0.714 (71.4%)
 
 
 2. Recall: Sensitivity
 
-        \[
-        \text{Recall} = \frac{TP}{TP + FN} = \frac{100}{100 + 60} = 0.625 \text{ (62.5%)}
-        \]
+        Recall = TP / (TP + FN) = 100 / (100 + 60) = 0.625 (62.5%)
 
 ### Deployment:
 
