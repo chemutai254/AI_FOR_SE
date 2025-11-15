@@ -5,10 +5,12 @@
 ### 📌 Problem Definition
 
 💡 **Define a hypothetical AI problem**
+
 *AI-powered Crop Disease Detection Application*
 - Develop an AI model that analyzes images of crop to detect early signs of disease and alert farmers before significant damage occurs.
 
 💡 **List 3 objectives and 2 stakeholders**
+
  *Objectives*
 - Accurately identify crop diseases from leaf images with minimal false positives.
 - Provide early warnings to farmers to reduce crop loss and improve yield.
