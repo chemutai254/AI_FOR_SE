@@ -11,14 +11,11 @@
 **List 3 objectives and 2 stakeholders**
 *Objectives*
 - Accurately identify crop diseases from leaf images with minimal false positives.
-
 - Provide early warnings to farmers to reduce crop loss and improve yield.
-
 - Offer actionable recommendations (e.g., treatment steps, severity level) through the app.
 
 *Stakeholders*
 - Farmers using the application to protect their crops.
-
 - Agricultural extension officers who support farmers and use insights for planning interventions.
 
 **Key Performance Indicator (KPI) to measure success**
@@ -27,11 +24,12 @@
 ### 2. Data Collection & Preprocessing 
 **Identify 2 data sources for your problem**
 1. *Kaggle* [Plant Disease Dataset](https://www.kaggle.com/datasets/emmarex/plantdisease?utm_source=chatgpt.com)
+
 2. *Tensorflow* Datasets Catalog [Plant Village Dataset](https://www.tensorflow.org/datasets/catalog/plant_village?utm_source=chatgpt.com)
 
 **Explain 1 potential bias in the data**
 - The AI model may perform well during testing but poorly in real-world scenarios, since the Plant Village Dataset contain high-quality, studio-like images taken under ideal lighting and uniform backgrounds. 
-- However, farmers images may contain the following characteristics: **poor lighting**, **blurry or partial leaves**, **complex backgrounds**, **multiple leaves in one photo**, or **dust, shadows, or weather effects**.
+- However, farmers images may contain the following characteristics: *poor lighting*, *blurry or partial leaves*, *complex backgrounds*, *multiple leaves in one photo*, or *dust, shadows, or weather effects*.
 
 **Outline 3 preprocessing steps**
 1. *Image Cleaning and Normalization*
@@ -50,8 +48,10 @@
 1. *Choose a model and justify your choice*
 - The project utilizes Convolutional Neural Networks (CNN) with transfer learning (the use of pre-trained models) such as **MobileNetV2** and **EfficientNet-lite**.
 - Why CNN with transfer learning? This is because CNNs are used in processing images. Transfer learning reduces data needs since it already knows the important visual features capitalizing on speed of crop classification. Additionaly, the two pre-trained models are small and fast, thus can run inference on farmers' mobile devices (offline capability).
+
 2. *Describe how you would split data into training/validation/test sets*
 - The dataset can be imbalanced due to some rare crop diseases. Thus, stratified splitting would be the best to split the dataset into the same proportion of each disease class. 
+
 3. *Name 2 hyperparameters you would tune and why?*
 - *Learning Rate*: It helps the model converge efficiently. High learning rate may cause unstable training, while low learning rate may slow the training.
 - *Dropout Rate*: Dropout helps reduce overfitting by randomly dropping neurons during training. This works efficiently when the dataset is small or the dataset contains imbalanced classes. 
@@ -68,6 +68,7 @@
 2. *What is concept drift? How would you monitor it post-deployment?*
 - *Concept drift* occurs when the statistical properties of the target variable, or the relationship between input and output, change over time causing the model's predicition to degrade.
 - Monitoring would be achieved through **Sample Ground Truth** where new small batch images would be labeled periodically, and re-train the model when drift is detected.
+
 3. *Describe 1 technical challenge during deployment (e.g., scalability)*
 - *Data Privacy and Security*: Crop disease images may contain sensitive farm information or geolocation data of the farmer. Thus, before depolyment, relevant data protection regulations should be put into consideration.
 - *Limited On-Device Resources*: Many farmers use low-end smartphones with limited memory. Thus, lightweight models and cloud processing would be a best choice.
@@ -94,16 +95,50 @@ Scenario: A hospital wants an AI system to predict patient readmission risk wit
 ### Data Strategy:
 
 *Propose data sources (e.g., EHRs, demographics)*
-- 
+- *Electronic Health Records (EHRs)*: Demographics, diagnoses, medications, lab results, vitals.
+- *Hospital Admission & Discharge Records*: Length of stay, prior admissions.
+- *Insurance / Claims Data*: Concurrent disease, procedure codes, past healthcare utilization.
+
 *Identify 2 ethical concerns (e.g., patient privacy)*
+- *Patient Privacy*: Sensitive health data must be protected in alignment with data protection regulations such as HIPAA and/or GDPR.
+- *Bias*: Historical discrepancies may lead to biased predictions against certain groups such as race, socioeconomic status, etc.
+- *Transparency*: Clinicians must understand why the AI flagged a patient as high risk.
 
 *Design a preprocessing pipeline (include feature engineering steps)*
+1. **Data Cleaning/Preprocessing**
+- Handle missing values: Impute lab results using median/mean for numerical data and mode for categorical data.
+- Remove duplicates or erroneous entries if any.
+
+2. **Feature Engineering**
+- Create aggregated features: Number of prior admissions, average length of stay.
+- Encode categorical variables such as gender and diagnosis codes using one-hot encoding.
+- Temporal features: days since last admission, seasonal trends.
+- Normalize continuous features such as age and lab results for scale consistency.
+
+3. **Train/Validation/Test Split**
+- Stratified split to preserve class balance (readmitted vs non-readmitted).
 
 ### Model Development:
 
 *Select a model and justify it*
+**XGBoost** is the most appropriate model since:
+- Provides feature importance for interpretability.
+- Handles tabular healthcare data effectively.
+- Captures non-linear relationships between features.
+- Robust to missing values and requires minimal feature scaling.
 
 *Create a confusion matrix and calculate precision/recall (hypothetical data)*
+|                       |   Predicted No        |   Predicted Yes   |
+|   Actual No           |       1300            |       40          |
+|   Actual Yes          |       60              |       100         |
+
+1. Precision: Predicts Positive Values
+        
+        Precision $= TP/TP+FP = 100/100+40 = 0.714 (71.4%)$
+
+2. Recall: Sensitivity
+
+        Recall $= TP/TP+FN = 100/100+60 = 0.625 (62.5%)$
 
 ### Deployment:
 
