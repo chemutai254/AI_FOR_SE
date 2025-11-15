@@ -137,6 +137,8 @@ Scenario: A hospital wants an AI system to predict patient readmission risk wit
         \[
         \text{Precision} = \frac{TP}{TP + FP} = \frac{100}{100 + 40} = 0.714 \text{ (71.4\%)}
         \]
+        $\text{Precision} = \frac{TP}{TP + FP} = \frac{100}{100 + 40} = 0.714\ (71.4\%)$
+
 
 2. Recall: Sensitivity
 
