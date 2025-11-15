@@ -20,7 +20,7 @@
 - Farmers using the application to protect their crops.
 - Agricultural extension officers who support farmers and use insights for planning interventions.
 
-**Key Performance Indicator (KPI) to measure success**
+💡 **Key Performance Indicator (KPI) to measure success**
 - Accuracy Detection Rate (%): The percentage of correctly identified diseased and healthy crops.
 
 ### 📌 Data Collection & Preprocessing 
@@ -166,16 +166,22 @@ Scenario: A hospital wants an AI system to predict patient readmission risk wit
 ### 📌 Ethics & Bias:
 
 💡 *How might biased training data affect patient outcomes in the case study?*
-
+- Unequal representation of each patient class may lead to poor model performance. This may result in wrong classification of patients to either high or low risk.
+- Some patients may also receive support more than the other with increased readmission amonth the vulnerable groups.
+- Wrong judgment by the health practitioners.
 
 💡 *Suggest 1 strategy to mitigate this bias*
-
+- Ensure balanced representation from various age groups and social class.
+- Perform audit trails by evaluating model performance.
+- Ensure continuous monitering of the model after deployment.
 
 ### 📌 Trade-offs:
 
-💡 Discuss the trade-off between model interpretability and accuracy in healthcare.
+💡 *Discuss the trade-off between model interpretability and accuracy in healthcare8*
+- The most accurate model is often the least interpretable and vice-versa. For medical practitioners, it is significant for them to interpret patients' outcome. Thus, healthcare industry should ensure transparency of the model. 
 
-💡 If the hospital has limited computational resources, how might this impact model choice?
+💡 *If the hospital has limited computational resources, how might this impact model choice?*
+- The application may fail to capture all requirements. The hospital should consider using simpler, lightweight, interpratebale model.
 
 ## Part 4: Reflection & Workflow Diagram
 
