@@ -134,11 +134,11 @@ Scenario: A hospital wants an AI system to predict patient readmission risk wit
 
 1. Precision: Predicts Positive Values
         
-        Precision $= \frac{TP}/\sum{TP+FP} = \frac{100}/\sum{100+40} = 0.714 (71.4%)$
+        Precision = \frac{TP}/\sum{TP+FP} = \frac{100}/\sum{100+40} = 0.714 (71.4%)
 
 2. Recall: Sensitivity
 
-        Recall $ = \frac{TP}/\sum{TP+FN} = \frac{100}/\sum{100+60} = 0.625 (62.5%)$
+        Recall = \frac{TP}/\sum{TP+FN} = \frac{100}/\sum{100+60} = 0.625 (62.5%)
 
 ### Deployment:
 
