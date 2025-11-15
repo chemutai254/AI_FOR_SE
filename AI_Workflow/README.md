@@ -78,7 +78,7 @@
 Scenario: A hospital wants an AI system to predict patient readmission risk within 30 days of discharge.
 
 
-### Problem Scope: Define the problem, objectives, and stakeholders.
+### 📌 Problem Scope: Define the problem, objectives, and stakeholders.
 *Problem*
 - To predict a patients risk of readmission within 30 days of discharge.
 
@@ -92,7 +92,7 @@ Scenario: A hospital wants an AI system to predict patient readmission risk wit
 - Hospital Management: Focus on reducing readmission rates and costs.
 - Patients: Improved care and reduced complications.
 
-### Data Strategy:
+### 📌 Data Strategy:
 
 *Propose data sources (e.g., EHRs, demographics)*
 - *Electronic Health Records (EHRs)*: Demographics, diagnoses, medications, lab results, vitals.
@@ -118,7 +118,7 @@ Scenario: A hospital wants an AI system to predict patient readmission risk wit
 3. **Train/Validation/Test Split**
 - Stratified split to preserve class balance (readmitted vs non-readmitted).
 
-### Model Development:
+### 📌 Model Development:
 
 *Select a model and justify it*
 **XGBoost** is the most appropriate model since:
@@ -142,7 +142,7 @@ Scenario: A hospital wants an AI system to predict patient readmission risk wit
 
         Recall = TP / (TP + FN) = 100 / (100 + 60) = 0.625 (62.5%)
 
-### Deployment:
+### 📌 Deployment:
 
 1. *Outline steps to integrate the model into the hospital’s system*
 - *API Deployment*: Host the model (API) in a secure hospital network.
@@ -161,7 +161,7 @@ Scenario: A hospital wants an AI system to predict patient readmission risk wit
 
 ## Part 3: Critical Thinking
 
-### Ethics & Bias:
+### 📌 Ethics & Bias:
 
 *How might biased training data affect patient outcomes in the case study?*
 
@@ -169,7 +169,7 @@ Scenario: A hospital wants an AI system to predict patient readmission risk wit
 *Suggest 1 strategy to mitigate this bias*
 
 
-### Trade-offs:
+### 📌 Trade-offs:
 
 Discuss the trade-off between model interpretability and accuracy in healthcare.
 
@@ -177,12 +177,12 @@ If the hospital has limited computational resources, how might this impact model
 
 ## Part 4: Reflection & Workflow Diagram
 
-### Reflection:
+### 📌 Reflection:
 
 What was the most challenging part of the workflow? Why?
 
 How would you improve your approach with more time/resources?
 
-### Diagram:
+### 📌 Diagram:
 
 Sketch a flowchart of the AI Development Workflow, labeling all stages.
