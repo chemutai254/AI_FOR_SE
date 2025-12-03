@@ -1,32 +1,35 @@
-# Sleep Disorder Prediction Model
+# Sleep Disorder Prediction
 
-## Objective
-To predict whether a person has a sleep disorder, i.e., sleep apnea or insomnia. The problem addressed is aligned with the UN SDG 3 Health. 
+## Description
+This project aims to predict the presence of sleep disorders (such as Insomnia and Sleep Apnea) based on an individual's lifestyle and health metrics. It addresses issues aligned with UN SDG 3 (Good Health and Well-being).
 
-## Data Source
-The dataset used was obtained from Kaggle: [Data Source](https://www.kaggle.com/datasets/uom190346a/sleep-health-and-lifestyle-dataset)
+## Key Objectives
+- Analyze the relationship between lifestyle habits (e.g., steps, physical activity) and sleep health.
+- Train and compare multiple machine learning models to predict sleep disorders.
 
-## Overview
-The dataset consists of 374 rows and 12 columns with a wide range of variables related to sleep and daily habits. They include gender, age, occupation, sleep duration, quality of sleep, physical activity level, stress levels, BMI category, blood pressure, heart rate, daily steps, and the presence or absence of sleep disorders. The target variable is the presence or absence of a sleep disorder.
+## Dataset
+- **Name**: Sleep Health and Lifestyle Dataset.
+- **Source**: [Kaggle](https://www.kaggle.com/datasets/uom190346a/sleep-health-and-lifestyle-dataset).
+- **Features**: Gender, Age, Occupation, Sleep Duration, Quality of Sleep, Physical Activity Level, Stress Level, BMI Category, Blood Pressure, Heart Rate, Daily Steps.
+- **Target**: Sleep Disorder (None, Insomnia, Sleep Apnea).
 
 ## Key Findings
+- Strong correlation between **Quality of Sleep** and **Sleep Duration**.
+- Strong correlation between **Daily Steps** and **Physical Activity Level**.
+- Strong correlation between **Stress Level** and **Heart Rate**.
 
-![Correlation Heatmap](../ML_WEEK_2/images/corr_heatmap.png)
-There was a strong correlation between:
-- quality of sleep and sleep duration
-- daily steps and physical activity levels
-- stress level and heart rate. 
-Additionally, there was a weak correlation between age and quality of sleep.
+## Tech Stack
+- **Language**: Python.
+- **Libraries**: Scikit-learn, Pandas, Matplotlib, Seaborn.
+- **Models**: Support Vector Machine (SVM), Decision Tree, Random Forest.
 
-## Confusion Matrix
-1. Support Vector Machine Model
+## Project Structure
+- `sleep_disorder_prediction.ipynb`: Main notebook for EDA and model training.
+- `sleep_disorder_app.py`: Python script for the application logic.
+- `Sleep_health_and_lifestyle_dataset.csv`: Dataset file.
+- `*.pkl`: Serialized model files (Random Forest, SVM, Decision Tree).
+- `images/`: Directory containing visualization plots.
 
- ![SVM](../ML_WEEK_2/images/svm.png)
-
-2. Decision Tree Model
-
- ![Decision Tree](../ML_WEEK_2/images/dt.png)
-
-3. Random Forest Model
-
- ![Random Forest](../ML_WEEK_2/images/rf.png)
+## How to Run
+1.  **Analysis**: Open `sleep_disorder_prediction.ipynb` to view the exploratory data analysis and model training.
+2.  **Application**: Run `python sleep_disorder_app.py` to launch the prediction application (if applicable/configured).
